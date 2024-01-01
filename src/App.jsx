@@ -7,7 +7,7 @@ import Cloud from './Images/cartoon-comic-cloud-png.webp'
 import Rain from './Images/rain.png'
 import Snow from './Images/snowflake.png'
 import Thunder from './Images/thunderstorm.png'
-
+//how?
 const App = () => {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
@@ -19,8 +19,8 @@ const App = () => {
       setWeather(response.data);
       setError(null);
     } catch (error) {
-      console.log('Enter valid city name')
-      // setError('City not found. Please enter a valid city name.');
+      console.error('Error fetching weather data:', error);
+      setError('City not found. Please enter a valid city name.');
     }
   };
   const closePopup = () => {
